@@ -14,52 +14,95 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style2.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
+  <script src="js/headerImage.js"></script>
+  <script src="js/vhSet.js"></script>
+  <!-- <script src="js/test.js"></script> -->
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="loader_box" id="loader_box">
+    <div class="loader">
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+    </div>
+  </div>
+
+  <div class="wrapper" id="wrapper">
 
     <!-- header -->
-    <header class="header ">
-      <div class="container">
-        <div class="header-logo">
-          <p class="logo">Nattsu.</p>
-          <!-- <img src="img/logo.png"  width="230px"> -->
+    <header class="header" id="header" >
+      <div class="header-box2">
+        <div class="header-box1" id="header-box1">
+          <div class="slide-hd"> 
+            <div class="slideshow">
+              <div class="slideshow-image" style="background-image: url('img/img1.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img2.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img3.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img4.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img5.jpg')"><div class="WhiteMask"></div></div>
+            </div>
+          </div>
         </div>
-        <nav class="gnav">
-          <ul class="gnav-list">
-            <li class="gnav-item"><a href="#works">活動一覧</a></li>
-            <!-- <li class="gnav-item"><a href="#skill">SKILL</a></li> -->
-            <li class="gnav-item"><a href="#about">プロフィール</a></li>
-            <li class="gnav-item"><a href="#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
+        <div class="header-box3" id="header-box3">
+          <div class="header-container">
+            <div class="header-logo">
+              <a href="#mv"><p class="logo">Nattsu.</p></a>
+              <!-- <img src="img/logo.png"  width="230px"> -->
+            </div>
+            <nav class="gnav">
+              <ul class="gnav-list">
+                
+                <li class="gnav-item"><a href="#works"><button>活動一覧</button></a></li>
+                <!-- <li class="gnav-item"><a href="#skill">SKILL</a></li> -->
+                <li class="gnav-item"><a href="#about"><button>プロフィール</button></a></li>
+                <li class="gnav-item"><a href="#contact"><button>お問い合わせ</button></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <!-- /header -->
 
-    <main class="content">
+    <main class="content" >
 
       <!-- mv -->
-      <div class="mv" style="background-image: url(img/main.jpg);">
-        
+      <div class="mv" id="mv" >
+        <div class="mv-box1">
+          <div class="slide-mv" id="slide-mv"> 
+            <div class="slideshow">
+              <div class="slideshow-image" style="background-image: url('img/img1.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img2.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img3.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img4.jpg')"><div class="WhiteMask"></div></div>
+              <div class="slideshow-image" style="background-image: url('img/img5.jpg')"><div class="WhiteMask"></div></div>
+            </div>
+          </div>
+        </div>
         <div class="mv-container" >
           <p class="mv-text">
             半紙コラージュアーティスト/デザイナー
           </p>
           <p class="mv-title">Nattsu.</p>
-          
         </div>
+        
       </div>
       <!-- /mv -->
 
       <!-- works -->
       <section class="works section" id="works">
         <div class="container">
-          <h2 class="title">＜活動一覧＞</h2>
+          <h2 class="title">活動一覧</h2>
           <div class="works-list">
             <div class="works-item">
               <a href="#">
@@ -79,13 +122,6 @@
               <a href="#">
                 <div class="works-img"><img src="img/item.jpg" alt="" /></div>
                 <p class="works-name">LINE LIVE</p>
-                <p class="works-info">説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。</p>
-              </a>
-            </div>
-            <div class="works-item">
-              <a href="#">
-                <div class="works-img"><img src="img/item.jpg" alt="" /></div>
-                <p class="works-name">Webショップ</p>
                 <p class="works-info">説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。</p>
               </a>
             </div>
@@ -113,6 +149,13 @@
             <div class="works-item">
               <a href="#">
                 <div class="works-img"><img src="img/item.jpg" alt="" /></div>
+                <p class="works-name">公式LINE</p>
+                <p class="works-info">説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。</p>
+              </a>
+            </div>
+            <div class="works-item">
+              <a href="#">
+                <div class="works-img"><img src="img/item.jpg" alt="" /></div>
                 <p class="works-name">Blog</p>
                 <p class="works-info">説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。説明文。</p>
               </a>
@@ -126,7 +169,7 @@
       <!-- about -->
       <section class="about section" id="about">
         <div class="container">
-          <h2 class="title">＜プロフィール＞</h2>
+          <h2 class="title">プロフィール</h2>
           <div class="profile">
             <div class="profile-left">
               <div class="profile-img">
@@ -140,14 +183,36 @@
               <p>
                 (なっつ)
               </p>
-              <p>
+              <p class="padding-b">
                 半紙コラージュアーティスト/デザイナー
               </p>
-              <p>
-                プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文
+              <p class="padding-b">
+                半紙コラージュアーティストとしてカラフルな
+                抽象表現メインで半紙を用いた絵画の制作をしています。<br>
+                自身の絵をベースにTシャツやノートなどのグッズ制作、
+                パッケージ、ポスター、名刺等のデザインやってます。<br>
+                絵を元に柄布生地を作り自主製作で衣装制作もしてます。
               </p>
-              <p>
-                プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文プロフィール文
+              <p class="padding-b">
+                制作、作品画像使用依頼の仕事も受け付けております。<br>
+                初めてのイベント出展で印刷会社から文具のデザイン依頼、
+                デザイン関係からウェディンググッズ制作、
+                ピアニストからコンサートのチラシの作品画像使用など、
+                クリエイティブ分野の方々から多くの依頼を受けております。
+              </p>
+              <p class="indent padding-b">
+                ・カラフルなものが好きでカラーセラピーにも興味があり、色の持つ効果を活かしたデザインの提案ができます。<br>
+              </p>
+              <p class="indent padding-b">
+                ・アートとデザインは別物と考えられがちですが、アーティストだからこそ出来るグラフィックデザインを提案していきます。
+              </p>
+              <p class="indent">
+                [半紙コラージュとは]<br>
+                書道に使われる半紙に絵具で色を塗って,ちぎって,
+                貼り重ねていく独自の技法。<br>
+                大学の卒業制作から始まり、試行錯誤の上続けていくうちに
+                はまっていき今や制作のメイン。<br>
+                ちぎり絵とは似て非なるもの。                
               </p>
             </div>
           </div>
@@ -164,11 +229,8 @@
           </p>
           <div class="contact-list">
             <div class="contact-box">
-              <!-- <a class="contact-item" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> -->
-              <a href="#">Twitter</a>
-              <a href="#">お問い合わせフォーム</a>
-              <!-- <a href="#"><button class="contact-button"  >Twitter</button></a>
-              <a href="#"><button class="contact-button"  >お問い合わせフォーム</button></a> -->
+              <a href="#"><button class="contact-button"  >Twitter</button></a>
+              <a href="#"><button class="contact-button"  >お問い合わせフォーム</button></a>
             </div>  
           </div>
         </div>
@@ -189,4 +251,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
 </body>
+
+
 </html>
+
