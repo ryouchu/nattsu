@@ -129,7 +129,7 @@ img {
   font-size: 34px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
   letter-spacing: .05em;
 }
@@ -786,8 +786,8 @@ p.indent{
 
   /* 見出し */
   .title {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 50px;
   }
 
   .lead {
