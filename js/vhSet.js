@@ -13,17 +13,14 @@ function setHeight() {
 
   // 読み込み完了後にページが表示される
 window.onload = function () {
-  console.log("ページ読み込み完了")
     const target = document.getElementById('wrapper');
     const target2 = document.getElementById('loader_box');
-    // target2.style.visibility = 'hidden';
     target2.style.opacity = '0';
     setTimeout(function(){
       scrollTo(0,0);
       target.style.opacity = '1';
       target.style.visibility = 'visible';
       target2.style.display = "none";
-      console.log("表示完了")
     },1000);
     
     }
