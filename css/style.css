@@ -1,8 +1,9 @@
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family:'M PLUS 1p',"Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 15px;
   letter-spacing: .05em;
   color: #333;
+  font-weight: 500;
 }
 
 
@@ -126,7 +127,7 @@ img {
 ---------------------------------*/
 .title {
   font-size: 34px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 40px;
   text-align: center;
@@ -148,10 +149,7 @@ img {
 }
 
 .header-logo .logo{
-  font-size: 35px;
-  font-weight: bold;
-  color: #333;
-  text-shadow: 1px 1px 0px white;
+  height: 40px;
 }
 
 .header {
@@ -229,7 +227,7 @@ img {
 
 .gnav-item a {
   position: relative;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: inline-block;
   transition: .3s;
   letter-spacing: .05em;
@@ -241,6 +239,7 @@ img {
 .gnav-item button {
   color: #333;  
   font-size: 13px;
+  font-weight: 700;
   height: 30px;
   width: 120px;
   display: inline-flex;
@@ -445,16 +444,11 @@ img {
 }
 
 .mv-title {
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 5px;
-  letter-spacing: .1em;
-  text-shadow: 3px 3px 0px white;
+  width: 280px;
 }
 .mv-subtitle {
   font-size: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 1;
   margin-bottom: 40px;
   letter-spacing: .08em;
@@ -463,13 +457,48 @@ img {
 .mv-text {
   font-size: 16px;
   line-height: 1.8;
-  font-weight: bold;
+  /* font-weight: bold; */
   
 }
 
 /*--------------------------------
  Works
 ---------------------------------*/
+
+/* フェードインアニメーション（全体） */
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.works .container {
+  opacity: 0;
+}
 
 
 .works-list {
@@ -481,7 +510,7 @@ img {
 
 .works-item {
   width: 50%;
-  padding: 3%;
+  padding: 3% 10%;
   z-index: 0;
 }
 
@@ -507,25 +536,33 @@ img {
 
 .works-name {
   font-size: 25px;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-top: 8px;
   text-align: center;
   color: #848484;
 }
 
 .works-info {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 400;
   margin-top: 5px;
   color: #848484;
+  text-align: center;
+  /* padding: 0 10%; */
 }
 
 
 /*--------------------------------
  About
 ---------------------------------*/
+
+.about .container {
+  opacity: 0;
+}
+
 .profile {
   display: flex;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   flex-direction: row;
 }
@@ -542,16 +579,23 @@ img {
   padding-left: 20px;
 }
 
-.profile-body p {
+.profile-body p, ruby {
   font-size: 15px;
   line-height: 1.8;
   color: #848484;
 }
 
 .profile-body .p-name {
+  font-family:"Montserrat",Meiryo,sans-serif;
   font-size: 40px;
   line-height: 1.1;
   font-weight: bold;
+}
+
+.profile-body .p-name rt{
+  font-size: 15px;
+  /* line-height: 1.1; */
+  font-weight: normal;
 }
 
 
@@ -563,12 +607,25 @@ img {
 p.indent{
   padding-left: 1em;
   text-indent: -1em;
+  margin-bottom: 20px;
+}
+
+.profile-body p.marg_bt {
+  margin-bottom: 40px;
+}
+
+.profile-body p.marg_bt_none {
+  margin-bottom: 0;
 }
 
 
 /*--------------------------------
  Contact
 ---------------------------------*/
+.contact .container {
+  opacity: 0;
+}
+
 .contact {
   text-align: center;
 }
@@ -588,7 +645,7 @@ p.indent{
 
 .contact-box a{
   margin: 0 40px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .contact-button {
@@ -614,7 +671,7 @@ p.indent{
  ページトップ
 ---------------------------------*/
 .page-top {
-  font-weight: bold;
+  /* font-weight: bold; */
   padding: 10px;
   cursor: pointer;
   text-align: center;
@@ -716,7 +773,7 @@ p.indent{
   }
 
   .header-logo .logo{
-    font-size: 30px;
+    height: 35px;
   }
 
   .gnav-item button {
@@ -765,7 +822,7 @@ p.indent{
   }
 
   .mv-title {
-    font-size: 50px;
+    width: 220px;
   }
   .mv-subtitle {
     font-size: 16px;
@@ -794,6 +851,7 @@ p.indent{
     flex: 0 0 48%;
     margin-right: 0;
     margin-bottom: 30px;
+    padding: 3%;
   }
 
   /* About */
@@ -863,7 +921,7 @@ p.indent{
   }
 
   .header-logo .logo{
-    font-size: 25px;
+    height: 25px;
   }
 
   .gnav-item button {
@@ -874,7 +932,7 @@ p.indent{
   }
 
   .mv-title {
-    font-size: 35px;
+    width: 180px;
   }
 
   .mv-text {
