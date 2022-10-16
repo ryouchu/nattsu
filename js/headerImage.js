@@ -1,6 +1,6 @@
 (function() {
     let vh = document.documentElement.clientHeight ;
-    const height     = vh-70;
+    const height     = vh+100-70;
     let offset       = 0,
         lastPosition = 0,
         ticking      = false;
