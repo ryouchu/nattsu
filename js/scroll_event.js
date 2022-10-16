@@ -35,4 +35,9 @@ var scrollAnimationFunc = function() {
         },time_rug);
     }
 }
+
+
+
+
+
 window.addEventListener('scroll', scrollAnimationFunc);

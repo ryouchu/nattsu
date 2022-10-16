@@ -12,7 +12,8 @@ function setHeight() {
 
 
   // 読み込み完了後にページが表示される
-window.onload = function () {
+window.onload = function () {  
+
     const target = document.getElementById('wrapper');
     const target2 = document.getElementById('loader_box');
     target2.style.opacity = '0';

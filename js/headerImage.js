@@ -1,28 +1,56 @@
+
+
+if (window.innerWidth > 767){
+  var offset_headerH = 20;
+} else {
+  var offset_headerH = 0;
+}
+
+
+function setHeader() {
+
+  const target3 = document.querySelector('.slideshow');
+  var hgh = -1 *  target3.offsetHeight + 70 + offset_headerH
+  
+  document.documentElement.style.setProperty('--hgh', `${hgh}px`);
+}
+
+setHeader();
+  
+// 3.ブラウザのサイズが変更された時・画面の向きを変えた時に再計算する
+window.addEventListener('resize', setHeader);
+
+
 (function() {
+    
     let vh = document.documentElement.clientHeight ;
-    const height     = vh+100-70;
     let offset       = 0,
         lastPosition = 0,
-        ticking      = false;
+        ticking      = false;    
 
     function onScroll() {
-        const target = document.getElementById('header-box3');
-        const target2 = document.getElementById('header-box1');
-        if (lastPosition > height) {
-          target2.style.opacity = '1';
-          
+      const target = document.getElementById('header-box3');
+      const target3 = document.querySelector('.slideshow');
+      
+      console.log('target3.offsetHeight' + target3.offsetHeight);
+      console.log('top' + target3.getBoundingClientRect().top)
+      console.log('bottom' + target3.getBoundingClientRect().bottom)
+
+      if (window.scrollY >= target3.offsetHeight - (70 + offset_headerH ) ) {
+        target3.classList.add('fixed');
+      } else {
+        target3.classList.remove('fixed');
+        if (lastPosition > offset) {
+          target.classList.add('show');
         } else {
-          if (lastPosition > offset) {
-            target.classList.add('show');
-          } else {
-          }
-          target2.style.opacity = '0';
-          offset = lastPosition;
+
         }
-        if (lastPosition == 0){
-          target.classList.remove('show');
-        }
-    }
+        offset = lastPosition;
+      }
+      if (lastPosition == 0){
+        target.classList.remove('show');
+      }
+  }
   
     window.addEventListener('scroll', function(e) {
       lastPosition = window.scrollY;
