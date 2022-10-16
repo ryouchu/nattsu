@@ -6,6 +6,9 @@ body {
   font-weight: 500;
 }
 
+.content {
+  overflow: hidden;
+}
 
 a {
   transition: opacity .3s;
@@ -112,9 +115,6 @@ img {
   padding: 80px 0;
 }
 
-.section:nth-of-type(odd) {
-  background-color: #f7f7f7;
-}
 
 .container {
   max-width: 1000px;
@@ -260,6 +260,8 @@ img {
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
+
+
 .mv {
   display: flex;
   justify-content: center;
@@ -274,20 +276,30 @@ img {
 .mv-box1 {
   position: absolute;
   width: 100%;
-  top: 0;
+  top: 0;  
 }
 
 .mv-container {
   position: absolute;
+  
 }
 
 /* ↓メイン画像 スライドショー↓ */
+
 .slideshow {
     position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    width: calc(100% + 200px);
+    min-height: calc(100vh + 100px);
+    min-height: calc(var(--vh, 1vh) * 100 + 100px);
     overflow: hidden;
+
+    /* 曲線の境界線 */
+    border-bottom-right-radius: 1000px 200px;
+    border-bottom-left-radius: 1000px 200px;
+    margin: 0 -100px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.52);
 }
 .slideshow-image {
     position: absolute;
@@ -301,6 +313,9 @@ img {
     animation-duration: 20s;
     opacity: 1;
     transform: scale(1.1);
+
+    /* min-height: 400px; */
+
 }
 .slideshow-image:nth-child(1) {
   animation-name: kenburns-1;
@@ -448,7 +463,6 @@ img {
 }
 .mv-subtitle {
   font-size: 20px;
-  /* font-weight: bold; */
   line-height: 1;
   margin-bottom: 40px;
   letter-spacing: .08em;
@@ -457,13 +471,27 @@ img {
 .mv-text {
   font-size: 16px;
   line-height: 1.8;
-  /* font-weight: bold; */
   
 }
 
 /*--------------------------------
+ Section-box
+---------------------------------*/
+
+.section-box {
+  padding-top: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/*--------------------------------
  Works
 ---------------------------------*/
+
+
+
 
 /* フェードインアニメーション（全体） */
 .fade-in-bottom {
@@ -496,7 +524,8 @@ img {
   }
 }
 
-.works .container {
+
+.works .title {
   opacity: 0;
 }
 
@@ -505,7 +534,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: -3%;
-  
+  opacity: 0;
 }
 
 .works-item {
@@ -515,13 +544,16 @@ img {
 }
 
 .works-item a {
-  opacity: .9;
   color: #333;
+  display: block;
+  transition: .3s;
 }
 
 .works-item a:hover {
   opacity: .8;
   transition: .3s;
+  transform: scale(1.05);
+  
 }
 
 .works-img {
@@ -532,11 +564,14 @@ img {
   width: 60%;
   min-width: 210px;
   height: auto;
+
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
 }
 
 .works-name {
   font-size: 25px;
-  /* font-weight: bold; */
   margin-top: 8px;
   text-align: center;
   color: #848484;
@@ -548,7 +583,6 @@ img {
   margin-top: 5px;
   color: #848484;
   text-align: center;
-  /* padding: 0 10%; */
 }
 
 
@@ -556,7 +590,7 @@ img {
  About
 ---------------------------------*/
 
-.about .container {
+.about .title {
   opacity: 0;
 }
 
@@ -565,6 +599,10 @@ img {
   max-width: 900px;
   margin: 0 auto;
   flex-direction: row;
+}
+
+.profile-img {
+  opacity: 0;
 }
 
 .profile-left {
@@ -577,6 +615,7 @@ img {
 .profile-body {
   flex: 1;
   padding-left: 20px;
+  opacity: 0;
 }
 
 .profile-body p, ruby {
@@ -622,12 +661,16 @@ p.indent{
 /*--------------------------------
  Contact
 ---------------------------------*/
-.contact .container {
+.contact .title {
   opacity: 0;
 }
 
 .contact {
   text-align: center;
+}
+
+.contact-body {
+  opacity: 0;
 }
 
 .contact-item:not(:last-child) {
@@ -671,7 +714,6 @@ p.indent{
  ページトップ
 ---------------------------------*/
 .page-top {
-  /* font-weight: bold; */
   padding: 10px;
   cursor: pointer;
   text-align: center;
