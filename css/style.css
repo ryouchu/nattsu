@@ -149,7 +149,7 @@ img {
 }
 
 .header-logo .logo{
-  height: 40px;
+  height: 35px;
 }
 
 .header {
@@ -294,13 +294,20 @@ img {
     overflow: hidden;
 
     /* 曲線の境界線 */
-    border-bottom-right-radius: 1000px 200px;
-    border-bottom-left-radius: 1000px 200px;
+    border-bottom-right-radius: 1000px 50px;
+    border-bottom-left-radius: 1000px 50px;
     margin: 0 -100px;
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.52);
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.52);
     -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.52);
 }
+
+.fixed {
+  position: fixed;
+  top: var(--hgh);
+  z-index: 1000;
+}
+
 .slideshow-image {
     position: absolute;
     width: 100%;
@@ -857,6 +864,14 @@ p.indent{
 
   .gnav-item:not(:last-child) {
     margin-right: 10px;
+  }
+
+  /* MV */
+
+  .slideshow {
+    /* 曲線の境界線 */
+    border-bottom-right-radius: 1000px 100px;
+    border-bottom-left-radius: 1000px 100px;
   }
 
   .mv-container {
