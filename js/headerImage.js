@@ -32,10 +32,6 @@ window.addEventListener('resize', setHeader);
       const target = document.getElementById('header-box3');
       const target3 = document.querySelector('.slideshow');
       
-      console.log('target3.offsetHeight' + target3.offsetHeight);
-      console.log('top' + target3.getBoundingClientRect().top)
-      console.log('bottom' + target3.getBoundingClientRect().bottom)
-
       if (window.scrollY >= target3.offsetHeight - (70 + offset_headerH ) ) {
         target3.classList.add('fixed');
       } else {
