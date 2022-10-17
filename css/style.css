@@ -26,7 +26,7 @@ img {
 .wrapper {
   visibility: hidden;
   opacity: 0;
-  transition: 1s;
+  transition: .5s;
 }
 
 .pc-only {
@@ -306,6 +306,7 @@ img {
   position: fixed;
   top: var(--hgh);
   z-index: 1000;
+  transition: 1s;
 }
 
 .slideshow-image {
