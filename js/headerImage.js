@@ -48,7 +48,7 @@ window.addEventListener('resize', setHeader);
       }
   }
   
-    window.addEventListener('scroll', function(e) {
+    window.addEventListener('scroll', function() {
       lastPosition = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(function() {

@@ -1,3 +1,4 @@
+
 // 1.関数の定義
 function setHeight() {
     let vh = document.documentElement.clientHeight * 0.01;
@@ -19,9 +20,11 @@ window.onload = function () {
     target2.style.opacity = '0';
     setTimeout(function(){
       scrollTo(0,0);
-      target.style.opacity = '1';
       target.style.visibility = 'visible';
-      target2.style.display = "none";
-    },1000);
+      setTimeout(function(){
+        target.style.opacity = '1';
+        target2.style.display = "none";
+      },500);
+    },500);
     
     }
